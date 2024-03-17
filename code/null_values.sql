@@ -12,7 +12,7 @@
 */
 
 -- working with null values
--- this doesn t work (if MIddleName is NULL => entire expression will be NULL)
+-- this works but may return NULL (if MIddleName is NULL => entire expression will be NULL)
 select
 	FirstName,
 	MiddleName,

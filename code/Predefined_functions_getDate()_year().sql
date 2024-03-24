@@ -29,8 +29,8 @@ from Person.Person
 select FirstName,
 	LEFT(firstName, 3)			as First_3_letters,
 	RIGHT(firstName, 3)			as Last_3_letters,
-	UPPER(FirstName)			as upperFirst,		-- all characters UPPERCASE
-	LOWER(firstName)			as lowerFirst,		-- all characters lowercase
+	UPPER(FirstName)			as upperFirstName,		-- all characters UPPERCASE
+	LOWER(firstName)			as lowerFirstName,		-- all characters lowercase
 	UPPER(RIGHT(firstName, 1))	as upper_last_letter
 from Person.Person
 
@@ -43,7 +43,7 @@ from Person.Person
 select
 	GETDATE()						as systemTime,
 	DATEPART(YEAR, Getdate())		as systemYear,
-	YEAR(Getdate())					as systemYear2,
+	YEAR(Getdate())					as systemYear2, -- returns only the year
 	Month(Getdate())				as systemMonth
 
 --gettin more familiar => 4, 5 ways to do similar things
